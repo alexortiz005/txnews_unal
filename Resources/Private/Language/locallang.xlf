@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-06-02T11:47:10Z" product-name="news_unal">
+		<header/>
+		<body>
+			<trans-unit id="no_news">
+				<source>No hay noticias</source>
+			</trans-unit>
+			<trans-unit id="ver_mas">
+				<source>Ver +</source>
+			</trans-unit>
+			<trans-unit id="author" xml:space="preserve">
+				<source>Por %s</source>
+			</trans-unit>
+			<trans-unit id="related-links" xml:space="preserve">
+				<source>Links Relacionados</source>
+			</trans-unit>
+			<trans-unit id="related-links" xml:space="preserve">
+				<source>Links Relacionados</source>
+			</trans-unit>
+			<trans-unit id="paginacion-anterior" xml:space="preserve">
+				<source>Anterior</source>
+			</trans-unit>
+			<trans-unit id="paginacion-siguiente" xml:space="preserve">
+				<source>Siguiente</source>
+			</trans-unit>
+			<trans-unit id="back-link" xml:space="preserve">
+				<source>Volver</source>
+			</trans-unit>
+			<trans-unit id="month.01" xml:space="preserve">
+				<source>Enero</source>
+			</trans-unit>
+			<trans-unit id="month.02" xml:space="preserve">
+				<source>Febrero</source>
+			</trans-unit>
+			<trans-unit id="month.03" xml:space="preserve">
+				<source>Marzo</source>
+			</trans-unit>
+			<trans-unit id="month.04" xml:space="preserve">
+				<source>Abril</source>
+			</trans-unit>
+			<trans-unit id="month.05" xml:space="preserve">
+				<source>Mayo</source>
+			</trans-unit>
+			<trans-unit id="month.06" xml:space="preserve">
+				<source>Junio</source>
+			</trans-unit>
+			<trans-unit id="month.07" xml:space="preserve">
+				<source>Julio</source>
+			</trans-unit>
+			<trans-unit id="month.08" xml:space="preserve">
+				<source>Agosto</source>
+			</trans-unit>
+			<trans-unit id="month.09" xml:space="preserve">
+				<source>Septiembre</source>
+			</trans-unit>
+			<trans-unit id="month.10" xml:space="preserve">
+				<source>Octubre</source>
+			</trans-unit>
+			<trans-unit id="month.11" xml:space="preserve">
+				<source>Noviembre</source>
+			</trans-unit>
+			<trans-unit id="month.12" xml:space="preserve">
+				<source>Deciembre</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

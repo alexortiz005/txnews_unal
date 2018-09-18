@@ -1,0 +1,39 @@
+{
+    "modules": [],
+    "properties": {
+        "backendModules": [],
+        "description": "permite acoplar la extension \"news\" a la plantilla de la unviersidad nacional",
+        "emConf": {
+            "category": "templates",
+            "custom_category": "",
+            "dependsOn": "typo3 => 8.6.0-8.6.99\nplantilla_unal => 1.0-1.9\nnews = > 6.3 - 6.4\nbootstrap_package\t=> 8.0-8.9\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "skipGenerateDocumentationTemplate": false,
+            "sourceLanguage": "es",
+            "state": "alpha",
+            "targetVersion": "8.6.0-8.6.99",
+            "version": "1.0.0"
+        },
+        "extensionKey": "news_unal",
+        "name": "News UNAL Style",
+        "originalExtensionKey": "",
+        "originalVendorName": "",
+        "persons": [
+            {
+                "company": "UNAL",
+                "email": "eaortiz@unal.edu.co",
+                "name": "Alexis",
+                "role": "Developer"
+            }
+        ],
+        "plugins": [],
+        "vendorName": "UNAL"
+    },
+    "wires": [],
+    "log": {
+        "last_modified": "2018-08-19 09:14",
+        "extension_builder_version": "8.6.0",
+        "be_user": " (1)"
+    }
+}

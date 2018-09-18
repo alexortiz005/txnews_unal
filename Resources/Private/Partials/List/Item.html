@@ -1,0 +1,39 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+<!--
+	=====================
+		Partials/List/Item.html
+-->
+<n:excludeDisplayedNews newsItem="{newsItem}" />
+<div class="row news-list-item">
+	<div class="col-md-12 articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="http://schema.org/Article">
+		<h3 itemprop="headline">
+			<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+				{newsItem.title}
+			</n:link>
+		</h3>
+
+		<f:render partial="General/AdditionalInformation" arguments="{settings:settings,newsItem:newsItem}" />
+
+		<!-- teaser -->
+		<div class="lead" itemprop="description">
+			<n:removeMediaTags>
+				<f:if condition="{newsItem.teaser}">
+					<f:then>
+						{newsItem.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()-> f:format.stripTags()}
+					</f:then>
+					<f:else>
+						{newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()-> f:format.stripTags()}
+					</f:else>
+				</f:if>
+			</n:removeMediaTags>
+		</div>
+
+		<n:link newsItem="{newsItem}" settings="{settings}" class="btn btn-default btn-read-more" title="{newsItem.title}">
+			<f:translate key="LLL:EXT:news_unal/Resources/Private/Language/locallang.xlf:ver_mas" />
+			<span class="glyphicon glyphicon-chevron-right">
+		</n:link>
+	</div>
+</div>
+</html>

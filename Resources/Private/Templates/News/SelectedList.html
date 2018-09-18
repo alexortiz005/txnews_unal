@@ -1,0 +1,77 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+<f:layout name="General" />
+<!--
+	=====================
+		Templates/News/List.html
+-->
+
+<f:section name="content">
+	<!--TYPO3SEARCH_end-->
+	<f:if condition="{news}">
+		<f:then>
+			<div class="news-list-view selected-list" id="news-container-{contentObjectData.uid}">
+
+
+
+			<div id="myCarousel{contentObjectData.uid}" class="carousel slide" data-ride="carousel">
+			  <!-- Indicators -->
+			  <ol class="carousel-indicators">
+			  	<f:for each="{news}" as="newsItem" iteration="iterator">
+			    	<li data-target="#myCarousel{contentObjectData.uid}" data-slide-to="{iterator.index}" class="{f:if(condition: iterator.isFirst, then: 'active', else: '')}"></li>
+				</f:for>
+			  </ol>
+
+			  <!-- Wrapper for slides -->
+			  <div class="carousel-inner">
+
+			  	<f:for each="{news}" as="newsItem" iteration="iterator">
+					
+					<div class="item carousel-news-item {f:if(condition: iterator.isFirst, then: 'active', else: '')}" data-imageurl="{newsItem.mediaPreviews.0.originalResource.publicUrl}">
+
+						<div class="container-fluid">
+							<div class="row ">
+								<div class="col-md-6 carousel-news-container">
+									<div class="row">
+										<div class=" col-md-offset-1 col-md-11">
+											<h2>{newsItem.title}</h2>
+											<p>{newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()-> f:format.stripTags()}</p>
+											<n:link newsItem="{newsItem}" settings="{settings}" class="btn btn-default btn-read-more" title="{newsItem.title}">
+												<f:translate key="LLL:EXT:news_unal/Resources/Private/Language/locallang.xlf:ver_mas" />
+												<span class="glyphicon glyphicon-chevron-right">
+											</n:link>											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+				 
+				    </div>
+				    
+				</f:for>
+			  
+
+			  <!-- Left and right controls -->
+			  <a class="left carousel-control" href="#myCarousel{contentObjectData.uid}" data-slide="prev">
+			    <span class="glyphicon glyphicon-chevron-left"></span>
+			    <span class="sr-only">Previous</span>
+			  </a>
+			  <a class="right carousel-control" href="#myCarousel{contentObjectData.uid}" data-slide="next">
+			    <span class="glyphicon glyphicon-chevron-right"></span>
+			    <span class="sr-only">Next</span>
+			  </a>
+			</div>
+
+
+			</div>
+		</f:then>
+		<f:else>
+			<div class="alert ">
+				<f:translate key="LLL:EXT:news_unal/Resources/Private/Language/locallang.xlf:no_news" />
+			</div>
+		</f:else>
+	</f:if>
+	<!--TYPO3SEARCH_begin-->
+</f:section>
+</html>

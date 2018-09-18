@@ -1,0 +1,19 @@
+{
+    "name": "unal/news-unal",
+    "type": "typo3-cms-extension",
+    "description": "permite acoplar la extension \"news\" a la plantilla de la unviersidad nacional",
+    "authors": [
+        {
+            "name": "Alexis",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^8.6.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "UNAL\\NewsUnal\\": "Classes"
+        }
+    }
+}

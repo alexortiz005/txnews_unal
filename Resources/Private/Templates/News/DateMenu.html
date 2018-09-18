@@ -1,0 +1,32 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="General" />
+<!--
+	=====================
+		Templates/News/DateMenu.html
+-->
+
+<f:section name="content">
+	<ul class="nav nav-sidebar news-menu-view">
+		<f:for each="{data.single}" key="year" as="months">
+			<li>
+				<span class="year">{year}</span>
+				<ul>
+					<f:for each="{months}" key="month" as="count">
+						<f:if condition="{0:year, 1:month} == {0:overwriteDemand.year, 1:overwriteDemand.month}">
+							<f:then>
+								<li class="month active">
+							</f:then>
+							<f:else>
+								<li  class="month">
+							</f:else>
+						</f:if>
+							<f:link.action pageUid="{listPid}" arguments="{overwriteDemand:{year: year, month: month}}"><f:translate key="LLL:EXT:news_unal/Resources/Private/Language/locallang.xlf:month.{month}" /> ({count}) </f:link.action>
+						</li>
+					</f:for>
+				</ul>
+			</li>
+		</f:for>
+		<li><span class="hidden-year">####</span></li>
+	</ul>
+</f:section>
+</html>
