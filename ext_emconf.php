@@ -25,8 +25,7 @@ $EM_CONF[$_EXTKEY] = [
     'constraints' => [
         'depends' => [
             'typo3' => '8.6.0-8.7.99',
-            'plantilla_unal' => '1.0-1.9',
-            'bootstrap_package' => '10.0.0-10.0.99,',
+            'bootstrap_package' => '10.0.0-10.0.99',
             'unal_skin_default' => '0.2.0-0.2.99',
             'news' => '6.3.0-6.3.99',
         ],
